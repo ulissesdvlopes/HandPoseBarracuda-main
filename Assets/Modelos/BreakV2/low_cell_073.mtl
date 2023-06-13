@@ -1,0 +1,14 @@
+# Blender MTL File: 'mario_Destroy_Sliced_V03.blend'
+# Material Count: 1
+
+newmtl bake
+Ns 31.953878
+Ka 0.345455 0.345455 0.345455
+Kd 0.800000 0.800000 0.800000
+Ks 0.868182 0.868182 0.868182
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.195455
+illum 6
+map_Bump .
+map_Kd .
