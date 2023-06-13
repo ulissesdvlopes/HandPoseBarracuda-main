@@ -1195,11 +1195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.972167
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2999997
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4182,7 +4182,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.09803922, g: 0.09803922, b: 0.09803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6345,6 +6345,10 @@ PrefabInstance:
     - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_Name
       value: EndButton Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
@@ -9213,11 +9217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.972167
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9542,6 +9546,10 @@ PrefabInstance:
     - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_Name
       value: EndButton Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
@@ -11966,11 +11974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.972167
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2999997
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -29756,11 +29764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.972167
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33872,6 +33880,10 @@ PrefabInstance:
     - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_Name
       value: EndButton Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
@@ -48640,11 +48652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.972167
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2999997
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024037, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

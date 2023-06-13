@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 540988565913958785, guid: bb85c771e1605434a8a0f3d470fb3ae7, type: 3}
       propertyPath: m_Name
-      value: SkipButton
+      value: SkipButton Variant
       objectReference: {fileID: 0}
     - target: {fileID: 540988565913958789, guid: bb85c771e1605434a8a0f3d470fb3ae7, type: 3}
       propertyPath: m_Size.x
@@ -133,11 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 540988565913958795, guid: bb85c771e1605434a8a0f3d470fb3ae7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.972167
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 540988565913958795, guid: bb85c771e1605434a8a0f3d470fb3ae7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2999997
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 540988565913958795, guid: bb85c771e1605434a8a0f3d470fb3ae7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
