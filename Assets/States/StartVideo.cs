@@ -19,7 +19,8 @@ public class StartVideo : State
 
     public override void Execute(string[] points)
     {
-        Test();
+        //Test();
+        Manager.DrawHands(points);
         
         // functionality
         if (points[0] != "3000") {

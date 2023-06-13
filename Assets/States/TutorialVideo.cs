@@ -18,7 +18,7 @@ public class TutorialVideo : State
 
     public override void Execute(string[] points)
     {
-        Debug.Log("Tutorial agora");
+        Manager.DrawHands(points);
 
         if (points[0] != "3000") {
             startCount++;
