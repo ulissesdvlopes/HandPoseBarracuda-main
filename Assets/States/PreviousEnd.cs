@@ -15,6 +15,7 @@ public class PreviousEnd : State
 
     void Start()
     {
+        print("PREVIOUS END START");
         video = gameObject.GetComponent<UnityEngine.Video.VideoPlayer>();
         video.Play();
         maxReads = 200;
@@ -48,6 +49,6 @@ public class PreviousEnd : State
     public override void Execute(string[] points)
     {
         readMarker(int.Parse(points[127]));
-        //print(video.isPlaying);
+        // print(video.isPlaying);
     }
 }

@@ -152,7 +152,7 @@ public class HandTracking : MonoBehaviour
 
     public void TheEnd()
     {
-        // ToStart();
+        ToStart();
         // for (int i = 0; i < 42; i++)
         // {
         //     handPoints[i].SetActive(false);
@@ -175,24 +175,15 @@ public class HandTracking : MonoBehaviour
     void Start()
     {
         audioData = handHover.GetComponent<AudioSource>();
-        Physics.gravity = new Vector3(0, -0.7F, 0);
-        // startVideo.SetActive(false);
-        // tutorialVideo.SetActive(false);
-        // introVideo.SetActive(false);
-        // instrucVideo.SetActive(false);
-        // introWordVideo.SetActive(false);
-        // introSliderVideo.SetActive(false);
-        // sliderVideo.SetActive(false);
-        // wordVideo.SetActive(false);
-        //spriteRenderer.color = Color.black;
+        Physics.gravity = new Vector3(0, -0.65F, 0);
 
         // state setting
-        ToStart();
-        //ToWords();
+        //  ToStart();
+        // ToWords();
         // ToIntroWords();
         // ToIntroSliders();
-        // ToSliders();
-        //ToInstructions();
+        ToSliders();
+        // ToInstructions();
         // ToPreviousEnd();
         // ToEndVideo();
 
@@ -239,6 +230,10 @@ public class HandTracking : MonoBehaviour
         state.Execute(points);
         if(HasFinished())
         {
+            print("-----------------------");
+            print("END");
+            finished.SetValue(false, 0);
+            finished.SetValue(false, 1);
             ToPreviousEnd();
         }
 

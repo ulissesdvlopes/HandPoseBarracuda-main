@@ -60,7 +60,7 @@ public class Sliders : State
 
     public override void Execute(string[] points)
     {
-        readMarker(int.Parse(points[127]));
+        // readMarker(int.Parse(points[127]));
         Manager.DrawHands(points);
         for (int i = 0; i < 3; i++) {
             sliders[i].SetActive(true);

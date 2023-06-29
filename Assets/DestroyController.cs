@@ -24,11 +24,14 @@ public class DestroyController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite oldSprite;
     public Sprite newSprite;
+    public GameObject Manager;
+    private HandTracking HT;
     AudioSource audioData;
     // Start is called before the first frame update
     void Start()
     {
         audioData = GetComponent<AudioSource>();
+        HT = Manager.GetComponent<HandTracking>();
     }
 
     // Update is called once per frame
@@ -36,7 +39,7 @@ public class DestroyController : MonoBehaviour
     {
         if (cracked) {
             countCracked++;
-            print(countCracked);
+            // print(countCracked);
         }
         if (countCracked >= countCrackedMax) {
 
@@ -50,6 +53,9 @@ public class DestroyController : MonoBehaviour
             //model.SetActive(true);
             modelSliced.SetActive(true);
             destroyedModel.SetActive(false);
+            HT.SetFinished(1);
+            HT.ToInstructions();
+
             onlyOnce = false;
         }
         if (active) {

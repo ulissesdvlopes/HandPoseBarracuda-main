@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndVideo : State
 {
@@ -9,7 +10,7 @@ public class EndVideo : State
     UnityEngine.Video.VideoPlayer video;
     public EndVideo(HandTracking manager): base(manager) {}
     int counter = 0;
-    int counterLimit = 6000;
+    const int counterLimit = 5000;
 
     void Start()
     {
@@ -20,12 +21,14 @@ public class EndVideo : State
 
     public override void Execute(string[] points)
     {
+        Manager.DrawHands(points);
         if(counter < counterLimit)
         {
             counter++;
         }
         else
         {
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Manager.TheEnd();
         }
         

@@ -6,6 +6,9 @@ using UnityEngine;
 public class Words : State
 {
     public GameObject[] wordsAssets;
+    public GameObject container;
+    public GameObject wordsPrefab;
+    private GameObject instantiatedWords;
     int[] lastReads;
     int readCount;
     int maxReads;
@@ -24,6 +27,17 @@ public class Words : State
         foreach (GameObject element in wordsAssets) {
             element.SetActive(true);
         }
+    }
+
+    void OnEnable()
+    {
+        instantiatedWords = (GameObject) Instantiate(wordsPrefab, new Vector3(0.46f, 2.1f, 0.0f), transform.rotation, container.transform);
+        // instantiatedWords = (GameObject) Instantiate(wordsPrefab, transform.position, transform.rotation, transform);
+    }
+
+    void OnDisable()
+    {
+        Destroy(instantiatedWords);
     }
 
     bool WrongMarkerValue(int value)
