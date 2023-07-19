@@ -29,7 +29,7 @@ public class EndVideo : State
         else
         {
             // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Manager.TheEnd();
+            Manager.ToStart();
         }
         
     }

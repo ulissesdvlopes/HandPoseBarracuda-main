@@ -182,7 +182,7 @@ public class HandTracking : MonoBehaviour
         // ToWords();
         // ToIntroWords();
         // ToIntroSliders();
-        //ToSliders();
+        // ToSliders();
         // ToInstructions();
         // ToPreviousEnd();
         // ToEndVideo();
