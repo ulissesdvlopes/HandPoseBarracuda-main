@@ -33,6 +33,19 @@ public class CatcherController : MonoBehaviour
     {
     }
 
+    void FixedUpdate()
+    {
+        foreach(GameObject word in words)
+            {
+                var rb = word.GetComponent<Rigidbody2D>();
+                if(rb != null)
+                {
+                    rb.velocity = Vector2.ClampMagnitude(rb.velocity, 0.02f);
+                }
+            }
+
+    }
+
     public void setFalse()
     {
         anim.SetBool("Yes", false);
@@ -93,12 +106,17 @@ public class CatcherController : MonoBehaviour
                 currentTyperY -= sprite.bounds.size.y * 1.2f;
                 other.transform.position = new Vector3((float)currentTyperX + offset, (float)currentTyperY, 0);
                 currentTyperX += sprite.bounds.size.x / 2 + offset;
-                print(other.name);
-                print("currentTyperY");
-                print(currentTyperY);
-                print("currentTyperX");
-                print(currentTyperX);
+                // print(other.name);
+                // print("currentTyperY");
+                // print(currentTyperY);
+                // print("currentTyperX");
+                // print(currentTyperX);
                 lineCount++;
+            }
+            if (lineCount > 1)
+            {
+                print("END WORDS");
+                other.gameObject.tag = "lastWord";
             }
             // if (lineCount > 3) {
             //     Destroy(other);
