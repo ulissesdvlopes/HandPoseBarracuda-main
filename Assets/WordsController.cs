@@ -35,7 +35,7 @@ public class WordsController : MonoBehaviour
             if(counter > maxCounter)
             {
                 print("ACABOU");
-                manager.ToInstructions();
+                manager.ToPreviousEnd();
             }
             return;
         }

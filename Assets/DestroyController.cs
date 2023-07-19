@@ -54,7 +54,7 @@ public class DestroyController : MonoBehaviour
             modelSliced.SetActive(true);
             destroyedModel.SetActive(false);
             HT.SetFinished(1);
-            HT.ToInstructions();
+            HT.ToPreviousEnd();
 
             onlyOnce = false;
         }

@@ -18,7 +18,7 @@ public class PreviousEnd : State
         print("PREVIOUS END START");
         video = gameObject.GetComponent<UnityEngine.Video.VideoPlayer>();
         video.Play();
-        maxReads = 200;
+        maxReads = 100;
         lastReads = new int[maxReads];
         for (int i = 0; i < maxReads; i++)
         {
@@ -42,7 +42,15 @@ public class PreviousEnd : State
         }
         if(Array.TrueForAll(lastReads, WrongMarkerValue))
         {
-            Manager.ToEndVideo();
+            if(Manager.HasFinished())
+            {
+                Manager.ToEndVideo();
+            }
+            else
+            {
+                Manager.ToInstructions();
+            }
+            
         }
     }
 

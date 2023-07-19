@@ -179,12 +179,12 @@ public class HandTracking : MonoBehaviour
 
         // state setting
         // ToStart();
-        ToWords();
+        // ToWords();
         // ToIntroWords();
         // ToIntroSliders();
         // ToSliders();
         // ToInstructions();
-        // ToPreviousEnd();
+        ToPreviousEnd();
         // ToEndVideo();
 
     }
