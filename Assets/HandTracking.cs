@@ -147,6 +147,8 @@ public class HandTracking : MonoBehaviour
 
     public void ToEndVideo()
     {
+        finished.SetValue(false, 0);
+        finished.SetValue(false, 1);
         SetState(endVideo.GetComponent<EndVideo>());
     }
 
@@ -179,12 +181,12 @@ public class HandTracking : MonoBehaviour
 
         // state setting
         // ToStart();
-        // ToWords();
+        ToWords();
         // ToIntroWords();
         // ToIntroSliders();
         // ToSliders();
         // ToInstructions();
-        ToPreviousEnd();
+        // ToPreviousEnd();
         // ToEndVideo();
 
     }
@@ -228,14 +230,14 @@ public class HandTracking : MonoBehaviour
         //print(points[63*3]);
 
         state.Execute(points);
-        if(HasFinished())
-        {
-            print("-----------------------");
-            print("END");
-            finished.SetValue(false, 0);
-            finished.SetValue(false, 1);
-            ToPreviousEnd();
-        }
+        // if(HasFinished())
+        // {
+        //     print("-----------------------");
+        //     print("END");
+        //     finished.SetValue(false, 0);
+        //     finished.SetValue(false, 1);
+        //     ToPreviousEnd();
+        // }
 
         //0        1*3      2*3
         //x1,y1,z1,x2,y2,z2,x3,y3,z3

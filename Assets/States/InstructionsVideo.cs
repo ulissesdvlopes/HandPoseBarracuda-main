@@ -8,7 +8,7 @@ public class InstructionsVideo : State
 
     void Transition(float marker)
     {
-        Debug.Log(marker);
+        // Debug.Log(marker);
         if(marker == 0)
         {
             Manager.ToIntroWords();

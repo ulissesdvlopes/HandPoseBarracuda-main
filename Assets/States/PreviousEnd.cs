@@ -42,6 +42,7 @@ public class PreviousEnd : State
         }
         if(Array.TrueForAll(lastReads, WrongMarkerValue))
         {
+            print("END OR INSTRUCTIONS");
             if(Manager.HasFinished())
             {
                 Manager.ToEndVideo();

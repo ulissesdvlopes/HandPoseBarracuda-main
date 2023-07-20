@@ -10,7 +10,10 @@ public class Sliders : State
     public GameObject[] sliders;
     public GameObject botao;
     public GameObject cube;
+    public GameObject slidersContainer;
     public GameObject handHover;
+    public GameObject warning;
+    private int warningCount = 0;
     int[] lastReads;
     int readCount;
     int maxReads;
@@ -29,6 +32,8 @@ public class Sliders : State
         foreach (GameObject element in slidersAssets) {
             element.SetActive(true);
         }
+        slidersContainer.SetActive(false);
+        botao.SetActive(false);
         // for (int i = 0; i < 3; i++) {
         //     sliders[i].SetActive(true);
         // }
@@ -54,7 +59,24 @@ public class Sliders : State
         if(Array.TrueForAll(lastReads, WrongMarkerValue))
         {
             Manager.SetFinished(1);
-            Manager.ToInstructions();
+            Manager.ToPreviousEnd();
+        }
+    }
+
+    private void executeWarning()
+    {
+        if(warningCount < 500)
+        {
+            warningCount++;
+        }
+        else 
+        {
+            if(warning.activeInHierarchy)
+            {
+                warning.SetActive(false);
+                slidersContainer.SetActive(true);
+                botao.SetActive(true);
+            }
         }
     }
 
@@ -62,12 +84,12 @@ public class Sliders : State
     {
         // readMarker(int.Parse(points[127]));
         Manager.DrawHands(points);
-        for (int i = 0; i < 3; i++) {
-            sliders[i].SetActive(true);
-        }
+        // for (int i = 0; i < 3; i++) {
+        //     sliders[i].SetActive(true);
+        // }
         cube.SetActive(true);
-        botao.SetActive(true);
         modeloFatiado.SetActive(true);
+        executeWarning();
     }
 }
 

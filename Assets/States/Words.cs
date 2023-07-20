@@ -13,6 +13,8 @@ public class Words : State
     int readCount;
     int maxReads;
     int id = 0;
+    public GameObject warning;
+    private int warningCount = 0;
 
     public Words(HandTracking manager): base(manager) {}
 
@@ -24,19 +26,27 @@ public class Words : State
         {
             lastReads.SetValue(id, i);
         }
-        foreach (GameObject element in wordsAssets) {
-            element.SetActive(true);
-        }
+        // foreach (GameObject element in wordsAssets) {
+        //     element.SetActive(true);
+        // }
+        
     }
 
     void OnEnable()
     {
         instantiatedWords = (GameObject) Instantiate(wordsPrefab, new Vector3(0.46f, 2.1f, 0.0f), transform.rotation, container.transform);
+        instantiatedWords.SetActive(false);
         // instantiatedWords = (GameObject) Instantiate(wordsPrefab, transform.position, transform.rotation, transform);
+        print("OnEnable");
+        warning.SetActive(true);
+        foreach (GameObject element in wordsAssets) {
+            element.SetActive(true);
+        }
     }
 
     void OnDisable()
     {
+        // instantiatedWords.SetActive(false);
         Destroy(instantiatedWords);
     }
 
@@ -57,7 +67,25 @@ public class Words : State
         if(Array.TrueForAll(lastReads, WrongMarkerValue))
         {
             Manager.SetFinished(id);
-            Manager.ToInstructions();
+            Manager.ToPreviousEnd();
+        }
+    }
+
+    private void executeWarning()
+    {
+        if(warningCount < 500)
+        {
+            warningCount++;
+        }
+        else 
+        {
+            if(warning.activeInHierarchy)
+            {
+                warning.SetActive(false);
+                instantiatedWords = (GameObject) Instantiate(wordsPrefab, new Vector3(0.46f, 2.1f, 0.0f), transform.rotation, container.transform);
+                // slidersContainer.SetActive(true);
+                // botao.SetActive(true);
+            }
         }
     }
 
@@ -65,6 +93,7 @@ public class Words : State
     {
         // readMarker(int.Parse(points[127]));
         Manager.DrawHands(points);
+        executeWarning();
     }
 }
 

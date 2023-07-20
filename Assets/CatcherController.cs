@@ -33,6 +33,11 @@ public class CatcherController : MonoBehaviour
     {
     }
 
+    void OnDisable()
+    {
+        lineCount = 1;
+    }
+
     void FixedUpdate()
     {
         foreach(GameObject word in words)
