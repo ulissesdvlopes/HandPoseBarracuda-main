@@ -8,37 +8,48 @@ public class TutorialVideo : State
     public SpriteRenderer spriteRenderer;
     bool started = false;
     public GameObject initButton;
+    public GameObject instructions;
 
     public TutorialVideo(HandTracking manager): base(manager) {}
 
     void Start()
     {
-        spriteRenderer.color = Color.black;
+        // spriteRenderer.color = Color.black;
     }
 
     public override void Execute(string[] points)
     {
-        Manager.DrawHands(points);
-
-        if (points[0] != "3000") {
-            startCount++;
-            spriteRenderer.color = Color.white;
+        // Manager.DrawHands(points);
+        startCount++;
+            // spriteRenderer.color = Color.white;
             //audioData.Play(0);
-            if (startCount > 500) {
-
-                started = true;
-                initButton.SetActive(true);
-                spriteRenderer.gameObject.SetActive(false);
+            if (startCount > 1000) {
+                Manager.ToIntro();
+                // started = true;
+                // initButton.SetActive(true);
+                // spriteRenderer.gameObject.SetActive(false);
             }
 
-        } else {
-            spriteRenderer.color = Color.black;
-        }
+        // if (points[0] != "3000") {
+        //     startCount++;
+        //     // spriteRenderer.color = Color.white;
+        //     //audioData.Play(0);
+        //     if (startCount > 1000) {
+        //         Manager.ToIntro();
+        //         // started = true;
+        //         // initButton.SetActive(true);
+        //         // spriteRenderer.gameObject.SetActive(false);
+        //     }
 
-        if(started)
-        {
-            Manager.DrawHands(points);
-        }
+        // } 
+        // else {
+        //     spriteRenderer.color = Color.black;
+        // }
+
+        // if(started)
+        // {
+        //     Manager.DrawHands(points);
+        // }
 
     }
 }
