@@ -180,7 +180,7 @@ public class HandTracking : MonoBehaviour
         Physics.gravity = new Vector3(0, -0.65F, 0);
 
         // state setting
-        ToStart();
+        // ToStart();
         // ToWords();
         // ToIntroWords();
         // ToIntroSliders();
@@ -188,7 +188,7 @@ public class HandTracking : MonoBehaviour
         // ToInstructions();
         // ToPreviousEnd();
         // ToEndVideo();
-        // ToTutorial();
+        ToTutorial();
 
     }
 

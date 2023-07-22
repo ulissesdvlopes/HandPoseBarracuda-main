@@ -23,7 +23,7 @@ public class TutorialVideo : State
         startCount++;
             // spriteRenderer.color = Color.white;
             //audioData.Play(0);
-            if (startCount > 1000) {
+            if (startCount > 2750) {
                 Manager.ToIntro();
                 // started = true;
                 // initButton.SetActive(true);

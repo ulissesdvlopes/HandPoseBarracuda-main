@@ -73,7 +73,7 @@ public class Words : State
 
     private void executeWarning()
     {
-        if(warningCount < 500)
+        if(warningCount < 1500)
         {
             warningCount++;
         }

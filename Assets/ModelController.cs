@@ -27,6 +27,10 @@ public class ModelController : MonoBehaviour
         float rotateValue = rotation.transform.localPosition[0] * 5;
         float colorValue = coloring.transform.localPosition[0] * 5;
         float progressingValue = progressing.transform.localPosition[0] * 5;
+
+        // print(rotateValue);
+        // print(colorValue);
+        // print(progressingValue);
         
         
         if (rotation.transform.localPosition[0] < 0) {

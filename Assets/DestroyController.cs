@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyController : MonoBehaviour
 {
-    float countMax = 3000;
+    float countMax = 1000;
     float count = 0;
     float countCracked = 0;
     float countCrackedMax = 300;
