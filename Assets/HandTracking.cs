@@ -84,8 +84,14 @@ public class HandTracking : MonoBehaviour
 
     void SetState(State newState)
     {
-        if(state)
+        if(state){
+            print("current state");
+            print(state.gameObject.name);
+            // var script = state.gameObject.GetComponent<Script>();
+            // print("script");
+            // print(script);
             state.gameObject.SetActive(false);
+        }
         newState.gameObject.SetActive(true);
         state = newState;
 
@@ -99,17 +105,21 @@ public class HandTracking : MonoBehaviour
     public void ToTutorial()
     {
         SetState(tutorialVideo.GetComponent<TutorialVideo>());
+        print("Totutorial");
     }
 
     public void ToIntro()
     {
+        // introVideo.GetComponent<UnityEngine.Video.VideoPlayer>().Play();
         SetState(introVideo.GetComponent<IntroVideo>());
+        print("ToIntro");
     }
 
     public void ToInstructions()
     {
         //introIsOver = true;
         SetState(instrucVideo.GetComponent<InstructionsVideo>());
+        print("ToInstructions");
     }
 
     public void ToIntroWords()
@@ -184,11 +194,11 @@ public class HandTracking : MonoBehaviour
         // ToWords();
         // ToIntroWords();
         // ToIntroSliders();
-        // ToSliders();
+        ToSliders();
         // ToInstructions();
         // ToPreviousEnd();
         // ToEndVideo();
-        ToTutorial();
+        // ToTutorial();
 
     }
 
@@ -208,15 +218,27 @@ public class HandTracking : MonoBehaviour
 
     public void VideoTransition(UnityEngine.Video.VideoPlayer video, ITransitionable transitionable)
     {
+        print("VideoTransition---------------------------------------");
+        print(video.isPrepared);
+        print(video.isPlaying);
+        print(transitionable.Started);
+        print("---------------------------------------VideoTransition");
+
         if(!video.isPrepared) return;
 
         if(video.isPrepared && !transitionable.Started) {
             transitionable.Started = true;
+            video.Play();
             return;
         }
             
         if(!video.isPlaying)
+        {
+            video.Stop();
+            transitionable.Started = false;
             transitionable.Transition();
+        }
+            
     }
 
     // Update is called once per frame

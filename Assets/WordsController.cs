@@ -7,16 +7,20 @@ public class WordsController : MonoBehaviour
     private bool finalAnimationStarted = false;
     private bool finalAnimationEnded = false;
     private Vector3 positionIncrement = new Vector3(0,-0.001f,0);
+    private Vector3 scaleIncrement = new Vector3(0.00009f,0.00009f,0.00009f);
     private int counter = 0;
     private const int maxCounter = 100;
     private HandTracking manager;
+    private Words words;
     // Start is called before the first frame update
     void Start()
     {
         if (manager == null) 
         {
-            var go = GameObject.FindWithTag("Manager");
-            manager = go.GetComponent<HandTracking>();
+            // var go = GameObject.FindWithTag("Manager");
+            // manager = go.GetComponent<HandTracking>();
+            var go = GameObject.FindWithTag("Words");
+            words = go.GetComponent<Words>();
         }
             
     }
@@ -35,17 +39,20 @@ public class WordsController : MonoBehaviour
             if(counter > maxCounter)
             {
                 print("ACABOU");
-                manager.SetFinished(0);
-                manager.ToPreviousEnd();
+                // manager.SetFinished(0);
+                // manager.ToPreviousEnd();
+                words.Transition();
             }
             return;
         }
 
         if(finalAnimationStarted)
         {
-            transform.position = transform.position + positionIncrement;
+            // transform.position = transform.position + positionIncrement;
+            transform.localScale = transform.localScale + scaleIncrement;
             // print(transform.position.y);
-            if(transform.position.y < 1.653) {
+            // if(transform.position.y < 1.653) {
+            if(transform.localScale.x > 0.052) {
                 finalAnimationEnded = true;
             }
         }

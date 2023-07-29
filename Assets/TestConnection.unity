@@ -907,10 +907,14 @@ PrefabInstance:
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2009153099}
+      objectReference: {fileID: 1857150304}
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToInstructions
+      value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
+      propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IntroVideo, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_Name
@@ -2927,10 +2931,14 @@ PrefabInstance:
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2009153099}
+      objectReference: {fileID: 1967247930}
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToStart
+      value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
+      propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EndVideo, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_Name
@@ -3910,7 +3918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &239474491
 Transform:
   m_ObjectHideFlags: 0
@@ -10789,10 +10797,14 @@ PrefabInstance:
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2009153099}
+      objectReference: {fileID: 911300066}
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToWords
+      value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
+      propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IntroWordsVideo, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_Name
@@ -12844,9 +12856,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 12f221ef594097a458c48ef038b2c7fd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.154
+  m_Volume: 0.566
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -15401,7 +15413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &761675590
 Transform:
   m_ObjectHideFlags: 0
@@ -18610,7 +18622,7 @@ GameObject:
   - component: {fileID: 917468370}
   m_Layer: 0
   m_Name: Video Player
-  m_TagString: Untagged
+  m_TagString: Words
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28195,7 +28207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 960b88bf834f5d84eb492b7466c076a0, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0f6931e6b24f004429b5328f2319377e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -35506,7 +35518,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1883869875}
   oldSprite: {fileID: 21300000, guid: 688cd0cbbc837aa4d8b8cd18407eab4a, type: 3}
   newSprite: {fileID: 21300000, guid: ed4f0ae574fc33449a1ff8831c5155b4, type: 3}
-  Manager: {fileID: 2009153096}
+  SlidersGO: {fileID: 1174590117}
 --- !u!222 &1883869881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36531,7 +36543,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1934882201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40798,7 +40809,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099172197}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd755917cadd17842a0a7067792b9890, type: 3}
   m_Name: 
@@ -42258,10 +42269,14 @@ PrefabInstance:
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2009153099}
+      objectReference: {fileID: 1795545789}
     - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToSliders
+      value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873606946413024038, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
+      propertyPath: TransictionFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IntroSlidersVideo, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3873606946413024047, guid: 8b22518b2ea5cbb4bb5cfc9ca3b0a52f, type: 3}
       propertyPath: m_Name

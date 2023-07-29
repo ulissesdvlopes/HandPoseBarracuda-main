@@ -8,6 +8,7 @@ public class StartVideo : State
     int startCount = 0;
     //AudioSource audioData;
     public SpriteRenderer spriteRenderer;
+    UnityEngine.Video.VideoPlayer video;
 
     public StartVideo(HandTracking manager): base(manager) {}
 
@@ -15,6 +16,19 @@ public class StartVideo : State
     {
         //audioData = Manager.handHover.GetComponent<AudioSource>();
         spriteRenderer.color = Color.black;
+        video = gameObject.GetComponent<UnityEngine.Video.VideoPlayer>();
+    }
+
+    void OnEnable()
+    {
+        // video.Play();
+        print("AQUIIIIIIIIIIIIIII");
+    }
+
+    void OnDisable()
+    {
+        // video.Stop();
+        print("ALLLLLLIIIIIIIIIIIIIII");
     }
 
     public override void Execute(string[] points)
@@ -28,7 +42,7 @@ public class StartVideo : State
             spriteRenderer.color = Color.white;
             //audioData.Play(0);
             if (startCount > 500) {
-
+                startCount = 0;
                 Manager.ToTutorial();
                 //Manager.hasStarted = true;
                 //Deactivate();

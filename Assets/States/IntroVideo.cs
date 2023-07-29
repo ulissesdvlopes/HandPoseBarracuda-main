@@ -18,8 +18,20 @@ public class IntroVideo : State, ITransitionable
         video = gameObject.GetComponent<UnityEngine.Video.VideoPlayer>();
     }
 
+    void onEnable()
+    {
+        print("onEnable IntroVideo");
+    }
+
+    void onDisable()
+    {
+        video.Stop();
+    }
+
     public void Transition()
     {
+        this.Started = false;
+        video.Stop();
         Manager.ToInstructions();
     }
 

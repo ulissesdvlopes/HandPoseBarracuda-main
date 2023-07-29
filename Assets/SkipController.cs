@@ -17,11 +17,18 @@ public class SkipController : MonoBehaviour
     {
     }
 
+    void onEnable()
+    {
+        countCollider = 0;
+        print("onEnable Skip");
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
 
         if(countCollider >= countMax) {
+            countCollider = 0;
             TransictionFunction.Invoke();
             return;
         }
@@ -46,7 +53,7 @@ public class SkipController : MonoBehaviour
         bar.transform.localScale = new Vector3(progress, 1.0f, 0.01f);
         if(hover) {
             countCollider++;
-            print(countCollider);
+            // print(countCollider);
             //bar.SetActive(true);
             
             return;

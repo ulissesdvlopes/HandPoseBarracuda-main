@@ -65,8 +65,14 @@ public class ModelController : MonoBehaviour
         var rotateAudio = rotation.GetComponent<AudioSource>();
         var colorAudio = coloring.GetComponent<AudioSource>();
         var progressingAudio = progressing.GetComponent<AudioSource>();
-        rotateAudio.volume = (float)rotateValue;
-        colorAudio.volume = (float)colorValue;
+        print("rotateValue");
+        print(rotateValue);
+        print("colorValue");
+        print(colorValue);
+        print("progressingValue");
+        print(progressingValue);
+        rotateAudio.volume = (float)rotateValue/2;
+        colorAudio.volume = (float)colorValue/2;
         progressingAudio.volume = (float)progressingValue;
 
         //Complete

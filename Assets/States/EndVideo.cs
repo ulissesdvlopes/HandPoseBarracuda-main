@@ -18,6 +18,11 @@ public class EndVideo : State
         video.Play();
     }
 
+    public void Transition()
+    {
+        counter = 0;
+        Manager.ToStart();
+    }
 
     public override void Execute(string[] points)
     {
@@ -29,7 +34,7 @@ public class EndVideo : State
         else
         {
             // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Manager.ToStart();
+            Transition();
         }
         
     }

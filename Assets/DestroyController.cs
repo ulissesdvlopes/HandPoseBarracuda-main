@@ -24,14 +24,24 @@ public class DestroyController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite oldSprite;
     public Sprite newSprite;
-    public GameObject Manager;
-    private HandTracking HT;
+    // public GameObject Manager;
+    public GameObject SlidersGO;
+    private Sliders SlidersController;
     AudioSource audioData;
+
+    Vector3 originalPosition;
+    Quaternion originalRotation;
+
+
     // Start is called before the first frame update
     void Start()
     {
         audioData = GetComponent<AudioSource>();
-        HT = Manager.GetComponent<HandTracking>();
+        // HT = Manager.GetComponent<HandTracking>();
+        SlidersController = SlidersGO.GetComponent<Sliders>();
+        var piece = destroyedModel.transform.GetChild(0).GetChild(0);
+        originalPosition = piece.position;
+        originalRotation = piece.rotation;
     }
 
     // Update is called once per frame
@@ -53,8 +63,10 @@ public class DestroyController : MonoBehaviour
             //model.SetActive(true);
             modelSliced.SetActive(true);
             destroyedModel.SetActive(false);
-            HT.SetFinished(1);
-            HT.ToPreviousEnd();
+            resetDestroyedModel();
+            // HT.SetFinished(1);
+            // HT.ToPreviousEnd();
+            SlidersController.Transition();
 
             onlyOnce = false;
         }
@@ -95,6 +107,16 @@ public class DestroyController : MonoBehaviour
             isGoing = false;
             rotated = false;
             cracked = true;
+        }
+    }
+
+    void resetDestroyedModel()
+    {
+        foreach(Transform cont in destroyedModel.transform)
+        {
+            var piece = cont.GetChild(0);
+            piece.position = originalPosition;
+            piece.rotation = originalRotation;
         }
     }
 

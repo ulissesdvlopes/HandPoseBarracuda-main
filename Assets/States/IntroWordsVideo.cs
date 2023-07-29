@@ -20,8 +20,15 @@ public class IntroWordsVideo : State, ITransitionable
         video = gameObject.GetComponent<UnityEngine.Video.VideoPlayer>();
     }
 
+    void onEnable()
+    {
+        
+    }
+
     public void Transition()
     {
+        this.Started = false;
+        video.Stop();
         Manager.ToWords();
     }
 

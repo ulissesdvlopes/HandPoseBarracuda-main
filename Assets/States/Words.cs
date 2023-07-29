@@ -47,7 +47,7 @@ public class Words : State
     void OnDisable()
     {
         // instantiatedWords.SetActive(false);
-        Destroy(instantiatedWords);
+        // Destroy(instantiatedWords);
     }
 
     bool WrongMarkerValue(int value)
@@ -86,7 +86,16 @@ public class Words : State
                 // slidersContainer.SetActive(true);
                 // botao.SetActive(true);
             }
+            warningCount = 0;
         }
+    }
+
+    public void Transition()
+    {
+        Destroy(instantiatedWords);
+        Manager.SetFinished(id);
+        warning.SetActive(true);
+        Manager.ToPreviousEnd();
     }
 
     public override void Execute(string[] points)

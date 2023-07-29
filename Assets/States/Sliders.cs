@@ -67,6 +67,12 @@ public class Sliders : State
     {
         if(warningCount < 1500)
         {
+            // if(!warning.activeInHierarchy)
+            // {
+            //     warning.SetActive(true);
+            //     slidersContainer.SetActive(false);
+            //     botao.SetActive(false);
+            // }
             warningCount++;
         }
         else 
@@ -77,7 +83,17 @@ public class Sliders : State
                 slidersContainer.SetActive(true);
                 botao.SetActive(true);
             }
+            warningCount = 0;
         }
+    }
+
+    public void Transition()
+    {
+        warning.SetActive(true);
+        slidersContainer.SetActive(false);
+        botao.SetActive(false);
+        Manager.SetFinished(1);
+        Manager.ToPreviousEnd();
     }
 
     public override void Execute(string[] points)

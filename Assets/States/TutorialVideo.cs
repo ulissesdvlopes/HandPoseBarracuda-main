@@ -15,6 +15,26 @@ public class TutorialVideo : State
     void Start()
     {
         // spriteRenderer.color = Color.black;
+        print("Start tutorial");
+        startCount = 0;
+    }
+
+    void onAwake()
+    {
+        print("onAwake tutorial");
+        // startCount = 0;
+    }
+
+    void onEnable()
+    {
+        // startCount = 0;
+        print("onEnable tutorial");
+    }
+
+    void onDisable()
+    {
+        // startCount = 0;
+        print("onDisable tutorial");
     }
 
     public override void Execute(string[] points)
@@ -24,6 +44,7 @@ public class TutorialVideo : State
             // spriteRenderer.color = Color.white;
             //audioData.Play(0);
             if (startCount > 2750) {
+                startCount = 0;
                 Manager.ToIntro();
                 // started = true;
                 // initButton.SetActive(true);
