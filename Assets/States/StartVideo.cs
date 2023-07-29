@@ -41,7 +41,7 @@ public class StartVideo : State
             startCount++;
             spriteRenderer.color = Color.white;
             //audioData.Play(0);
-            if (startCount > 500) {
+            if (startCount > 250) {
                 startCount = 0;
                 Manager.ToTutorial();
                 //Manager.hasStarted = true;

@@ -36496,6 +36496,7 @@ MonoBehaviour:
   - {fileID: 7307175268049213343, guid: 1f877625c66f68946862ca22aae76ab8, type: 3}
   - {fileID: 8594550124225315453, guid: 6c014ed4c85eb374b8a117211af512f9, type: 3}
   - {fileID: 1086622634732238090, guid: 997547eba3640d049bde741efe3da686, type: 3}
+  numberOfLines: 4
   anim: {fileID: 1931507475}
 --- !u!61 &1931507474
 BoxCollider2D:
@@ -40809,7 +40810,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099172197}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd755917cadd17842a0a7067792b9890, type: 3}
   m_Name: 

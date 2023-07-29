@@ -18,7 +18,7 @@ public class PreviousEnd : State
         print("PREVIOUS END START");
         video = gameObject.GetComponent<UnityEngine.Video.VideoPlayer>();
         video.Play();
-        maxReads = 100;
+        maxReads = 100/2;
         lastReads = new int[maxReads];
         for (int i = 0; i < maxReads; i++)
         {

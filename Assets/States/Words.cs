@@ -37,11 +37,11 @@ public class Words : State
         instantiatedWords = (GameObject) Instantiate(wordsPrefab, new Vector3(0.46f, 2.1f, 0.0f), transform.rotation, container.transform);
         instantiatedWords.SetActive(false);
         // instantiatedWords = (GameObject) Instantiate(wordsPrefab, transform.position, transform.rotation, transform);
-        print("OnEnable");
+        print("OnEnable Words");
         warning.SetActive(true);
-        foreach (GameObject element in wordsAssets) {
-            element.SetActive(true);
-        }
+        // foreach (GameObject element in wordsAssets) {
+        //     element.SetActive(true);
+        // }
     }
 
     void OnDisable()
@@ -73,7 +73,7 @@ public class Words : State
 
     private void executeWarning()
     {
-        if(warningCount < 1500)
+        if(warningCount < 1500/2)
         {
             warningCount++;
         }

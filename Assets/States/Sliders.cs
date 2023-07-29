@@ -65,7 +65,7 @@ public class Sliders : State
 
     private void executeWarning()
     {
-        if(warningCount < 1500)
+        if(warningCount < 1500/2)
         {
             // if(!warning.activeInHierarchy)
             // {

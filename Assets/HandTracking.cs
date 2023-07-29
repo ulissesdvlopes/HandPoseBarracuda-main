@@ -191,10 +191,10 @@ public class HandTracking : MonoBehaviour
 
         // state setting
         // ToStart();
-        // ToWords();
-        // ToIntroWords();
+        ToWords();
+        //ToIntroWords();
         // ToIntroSliders();
-        ToSliders();
+        // ToSliders();
         // ToInstructions();
         // ToPreviousEnd();
         // ToEndVideo();
@@ -218,11 +218,11 @@ public class HandTracking : MonoBehaviour
 
     public void VideoTransition(UnityEngine.Video.VideoPlayer video, ITransitionable transitionable)
     {
-        print("VideoTransition---------------------------------------");
-        print(video.isPrepared);
-        print(video.isPlaying);
-        print(transitionable.Started);
-        print("---------------------------------------VideoTransition");
+        //print("VideoTransition---------------------------------------");
+        //print(video.isPrepared);
+        //print(video.isPlaying);
+        //print(transitionable.Started);
+        //print("---------------------------------------VideoTransition");
 
         if(!video.isPrepared) return;
 
@@ -234,7 +234,7 @@ public class HandTracking : MonoBehaviour
             
         if(!video.isPlaying)
         {
-            video.Stop();
+            //video.Stop();
             transitionable.Started = false;
             transitionable.Transition();
         }
@@ -244,7 +244,9 @@ public class HandTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print("Update");
         string data = udpReceive.data;
+        //print(data);
 
         data = data.Remove(0, 1);
         data = data.Remove(data.Length - 1, 1);

@@ -16,6 +16,7 @@ public class CatcherController : MonoBehaviour
     float currentTyperY = 1.0f; // 1.4 a 1.0
     bool isFirst = true;
     int lineCount = 1;
+    public int numberOfLines = 4;
     public Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -118,7 +119,7 @@ public class CatcherController : MonoBehaviour
                 // print(currentTyperX);
                 lineCount++;
             }
-            if (lineCount > 1)
+            if (lineCount > numberOfLines)
             {
                 print("END WORDS");
                 other.gameObject.tag = "lastWord";

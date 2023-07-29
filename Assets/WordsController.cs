@@ -6,7 +6,7 @@ public class WordsController : MonoBehaviour
 {
     private bool finalAnimationStarted = false;
     private bool finalAnimationEnded = false;
-    private Vector3 positionIncrement = new Vector3(0,-0.001f,0);
+    private Vector3 positionIncrement = new Vector3(0.0005f,-0.0005f,0);
     private Vector3 scaleIncrement = new Vector3(0.00009f,0.00009f,0.00009f);
     private int counter = 0;
     private const int maxCounter = 100;
@@ -48,11 +48,11 @@ public class WordsController : MonoBehaviour
 
         if(finalAnimationStarted)
         {
-            // transform.position = transform.position + positionIncrement;
+            transform.position = transform.position + positionIncrement;
             transform.localScale = transform.localScale + scaleIncrement;
             // print(transform.position.y);
             // if(transform.position.y < 1.653) {
-            if(transform.localScale.x > 0.052) {
+            if(transform.localScale.x > 0.049) {
                 finalAnimationEnded = true;
             }
         }

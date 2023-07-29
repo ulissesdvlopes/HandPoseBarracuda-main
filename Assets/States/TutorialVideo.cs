@@ -39,11 +39,11 @@ public class TutorialVideo : State
 
     public override void Execute(string[] points)
     {
-        // Manager.DrawHands(points);
+        Manager.DrawHands(points);
         startCount++;
             // spriteRenderer.color = Color.white;
             //audioData.Play(0);
-            if (startCount > 2750) {
+            if (startCount > 2750/2) {
                 startCount = 0;
                 Manager.ToIntro();
                 // started = true;

@@ -28,7 +28,7 @@ public class IntroWordsVideo : State, ITransitionable
     public void Transition()
     {
         this.Started = false;
-        video.Stop();
+        //video.Stop();
         Manager.ToWords();
     }
 
